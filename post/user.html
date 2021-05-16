@@ -15,7 +15,7 @@
             <div id="navigation">
                 <a href="./?category=total">Leaderboards</a>
                 <a href="user?user=CatsUnited">Users</a>
-                <a href="history?user=CatsUnited">History</a>
+                <a href="history?user=CatsUnited" id="historylinkmodifier">History</a>
                 <a href="javascript:themeswitch()" id="themeindicator"></a>
                 <a href="https://my-ocular.jeffalo.net/login">Customise Profile (Ocular)</a>
             </div>
@@ -74,7 +74,7 @@
         </div>
         <div id="footer">
             <div>Made by <a href="https://scratch.mit.edu/users/CatsUnited">CatsUnited</a></div>
-            <div>Data from <a href="https://scratchdb.lefty.one/">ScratchDB</a> by <a href="https://scratch.mit.edu/users/DatOneLefty">DatOneLefty</a> and <a href="https://ocular.jeffalo.net/">Ocular</a> from <a href="https://scratch.mit.edu/users/Jeffalo">Jeffalo</a></div>
+            <div>Data from <a href="https://scratchdb.lefty.one/">ScratchDB</a> by <a href="https://scratch.mit.edu/users/DatOneLefty">DatOneLefty</a> and <a href="http://ocular.jeffalo.net/?utm_campaign=Scratch%20Forum%20Leaderboards">Ocular</a> from <a href="https://scratch.mit.edu/users/Jeffalo">Jeffalo</a></div>
         </div>
         <div id="nowlaugh"></div>
         <div style="color: #FFF; text-align: center; font-family: 'Comic Sans MS', Comic Sans;">bottom text</div>
@@ -133,6 +133,7 @@
                 themeupdate()
             }
             themeupdate()
+
             var chartCategories = [];
             var chartCounts = [];
             var chartColors = [];
@@ -151,6 +152,7 @@
                 var selectedUsername = "CatsUnited";
             }
             document.getElementById("posthistorypercategory").href = `history?user=${selectedUsername}`
+            document.getElementById("historylinkmodifier").href = `history?user=${selectedUsername}`
 
             function HSVtoRGB(h, s, v) {
                 var r, g, b, i, f, p, q, t;
